@@ -4,5 +4,6 @@ __pycache__/
 .test-deps/
 .env
 .vs/
+.ssh/
 uvicorn.stdout.log
 uvicorn.stderr.log
