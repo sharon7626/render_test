@@ -5,5 +5,8 @@ __pycache__/
 .env
 .vs/
 .ssh/
+*.db
+*.sqlite
+*.sqlite3
 uvicorn.stdout.log
 uvicorn.stderr.log

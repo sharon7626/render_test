@@ -36,6 +36,34 @@ python -m uvicorn main:app --reload
 {"status":"ok"}
 ```
 
+## Books CRUD API
+
+| Method | Endpoint | 說明 |
+| --- | --- | --- |
+| `POST` | `/books` | 建立書籍 |
+| `GET` | `/books` | 取得所有書籍 |
+| `GET` | `/books/{book_id}` | 取得指定書籍 |
+| `PUT` | `/books/{book_id}` | 完整更新指定書籍 |
+| `DELETE` | `/books/{book_id}` | 刪除指定書籍 |
+
+建立書籍的 JSON 範例：
+
+```json
+{
+  "title": "Clean Code",
+  "author": "Robert C. Martin",
+  "published_year": 2008,
+  "isbn": "9780132350884"
+}
+```
+
+## 資料庫
+
+- 本機：未設定 `DATABASE_URL` 時，自動使用專案根目錄的 SQLite `books.db`。
+- Render：`render.yaml` 會建立 `fastapi-books-db` PostgreSQL，並將內部連線字串注入 `DATABASE_URL`。
+
+資料表會在應用程式啟動時自動建立。本機的 `books.db` 已由 `.gitignore` 排除，不會推送到 GitHub。
+
 ## 部署至 Render
 
 1. 將此專案推送至 GitHub、GitLab 或 Bitbucket。
