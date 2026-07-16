@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+.venv/
+.test-deps/
+.env
+.vs/
+uvicorn.stdout.log
+uvicorn.stderr.log
